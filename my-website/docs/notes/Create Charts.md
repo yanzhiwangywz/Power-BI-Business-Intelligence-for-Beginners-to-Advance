@@ -1,5 +1,5 @@
 ---
-sidebar_position: 1
+sidebar_position: 100
 id: charts-echarts
 title: Charts Demo with ECharts
 sidebar_label: Charts (ECharts)

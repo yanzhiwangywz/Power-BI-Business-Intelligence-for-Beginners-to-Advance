@@ -1,5 +1,5 @@
 ---
-sidebar_position: 2
+sidebar_position: 1
 id: Visuals-Intro
 title: Visuals Intro
 sidebar_label: Visuals Intro

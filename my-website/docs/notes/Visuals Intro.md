@@ -1,3 +1,9 @@
+---
+sidebar_position: 2
+id: Visuals-Intro
+title: Visuals Intro
+sidebar_label: Visuals Intro
+---
 # What charts to use
 
 | **Trend Analysis**                                           | **Comparison**                                               | **Correlation**                                              | **Distribution**                                             | **Part-to-Whole**                                            |

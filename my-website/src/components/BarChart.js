@@ -8,7 +8,7 @@ const BarChart = () => {
 
   useEffect(() => {
     // Fetch and parse the CSV file
-    fetch('/data/financials.csv') // Updated to match the CSV file name
+    fetch('/data/financials.csv')
       .then(response => response.text())
       .then(csvText => {
         Papa.parse(csvText, {
@@ -62,6 +62,7 @@ const BarChart = () => {
       },
       legend: {
         data: ['Sales', 'COGS'],
+        top: '10%', // Position legend below the title (second line)
       },
       xAxis: {
         type: 'category',
@@ -101,7 +102,6 @@ const BarChart = () => {
 
   return (
     <div>
-      <h2>Sales and COGS by Country (ECharts)</h2>
       <div ref={chartRef} style={{ width: '600px', height: '400px', marginTop: '20px' }} />
     </div>
   );

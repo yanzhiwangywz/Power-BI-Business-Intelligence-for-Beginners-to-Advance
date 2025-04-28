@@ -25,6 +25,7 @@ module.exports = {
       ({
         docs: {
           sidebarPath: path.join(__dirname, './sidebars.js'), // Path to sidebar configuration
+          sidebarCollapsible: true,
           // Define route for docs, including notes if placed under docs
           routeBasePath: 'docs',
         },

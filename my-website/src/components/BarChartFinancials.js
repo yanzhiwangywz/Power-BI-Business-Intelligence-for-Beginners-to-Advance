@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import * as echarts from 'echarts';
 import Papa from 'papaparse';
 
-const BarChart = () => {
+const BarChartFinancials = () => {
   const chartRef = useRef(null);
   const [chartData, setChartData] = useState(null);
 
@@ -107,4 +107,4 @@ const BarChart = () => {
   );
 };
 
-export default BarChart;
+export default BarChartFinancials;

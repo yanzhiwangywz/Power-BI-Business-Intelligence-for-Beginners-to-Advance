@@ -14,3 +14,9 @@ Bar charts are one of the most common data visualizations. With them, you can qu
 * The horizontal format makes it easier to compare the values than a column chart
 * Bar charts are good when you have a long series of labels
 * Include multiple bar charts and group them next to one another on your dashboard. This helps the viewer quickly compare related information instead of flipping through a bunch of spreadsheets or slides to answer a question. 
+
+import BarChart-financials from '../../src/components/BarChart-financials';
+
+# Financial Sales and COGS Chart
+
+<BarChart-financials />

@@ -127,7 +127,7 @@ const BarChartFinancialsByCountry = () => {
 
   useEffect(() => {
     // Fetch and parse the pre-calculated CSV file
-    fetch('/data/BarChartFinancialsByCountry.csv')
+    fetch('/data/BarChart/BarChartFinancialsByCountry.csv')
       .then(response => response.text())
       .then(csvText => {
         Papa.parse(csvText, {

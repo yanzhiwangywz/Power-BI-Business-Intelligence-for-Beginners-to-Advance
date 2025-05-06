@@ -19,19 +19,26 @@ Bar charts are one of the most common data visualizations. With them, you can qu
 
 **Download Data:**
 
-<a href="/data/financials.csv" download="financials.csv">Download Financials Data (CSV)</a>
+<a href="/data/BarChart/financials.csv" download="financials.csv">Download Financials Data (CSV)</a>
 
 ---
 
-import BarChartFinancialsByCountry from '../../src/components/BarChartFinancialsByCountry';
+import BarChartFinancialsByCountry from '../../src/components/BarChartJS/BarChartFinancialsByCountry';
 
 <BarChartFinancialsByCountry /> 
 
+
+<a href="/data/BarChart/BarChartFinancialsByCountry.csv" download="financials.csv">Download BarChartFinancialsByCountry.csv</a>
+
 --- 
 
-import BarChartFinancialsByMonth from '../../src/components/BarChartFinancialsByMonth';
+import BarChartFinancialsByMonth from '../../src/components/BarChartJS/BarChartFinancialsByMonth';
 
 <BarChartFinancialsByMonth /> 
+
+**Download Data:**
+
+<a href="/data/BarChart/BarChartFinancialsByMonth.csv" download="financials.csv">Download BarChartFinancialsByMonth.csv</a>
 
 --- 
 

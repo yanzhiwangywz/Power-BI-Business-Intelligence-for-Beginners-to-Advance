@@ -8,7 +8,7 @@ const BarChartFinancialsByMonth = () => {
 
   useEffect(() => {
     // Fetch and parse the CSV file
-    fetch('/data/BarChartFinancialsByMonth.csv')
+    fetch('/data/BarChart/BarChartFinancialsByMonth.csv')
       .then(response => response.text())
       .then(csvText => {
         Papa.parse(csvText, {

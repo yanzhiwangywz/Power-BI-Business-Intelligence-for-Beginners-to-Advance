@@ -8,7 +8,7 @@ const BarChartFinancialsByMonth = () => {
 
   useEffect(() => {
     // Fetch and parse the CSV file
-    fetch('/data/BarChartFinancialsByMonth.csv')
+    fetch('/data/financials.csv')
       .then(response => response.text())
       .then(csvText => {
         Papa.parse(csvText, {
@@ -16,13 +16,26 @@ const BarChartFinancialsByMonth = () => {
           skipEmptyLines: true,
           complete: (result) => {
             const data = result.data;
-            // Transform CSV data into dataset.source format (array of objects)
-            const source = data.map(row => ({
-              YearMonth: `${row.Year}-${row['Month Name']}`, // Format as "Year-Month"
-              Sales: parseFloat(row.Sum_Sales) || 0,
-              COGS: parseFloat(row.Sum_COGS) || 0
-            })).sort((a, b) => a.YearMonth.localeCompare(b.YearMonth)); // Sort chronologically
-            setChartData(source);
+
+            // Process data to calculate total Sales and COGS per Year-Month
+            const monthMetrics = data.reduce((acc, curr) => {
+              const year = curr.Year;
+              const month = curr['Month Name']; // Using Month Name for readability
+              const yearMonth = `${year}-${month}`; // Format as "Year-Month"
+              if (!acc[yearMonth]) {
+                acc[yearMonth] = { Sales: 0, COGS: 0 };
+              }
+              acc[yearMonth].Sales += parseFloat(curr.Sales) || 0;
+              acc[yearMonth].COGS += parseFloat(curr.COGS) || 0;
+              return acc;
+            }, {});
+
+            // Extract Year-Month combinations, Sales, and COGS for the chart
+            const yearMonths = Object.keys(monthMetrics).sort(); // Sort for chronological order
+            const salesData = yearMonths.map(yearMonth => monthMetrics[yearMonth].Sales);
+            const cogsData = yearMonths.map(yearMonth => monthMetrics[yearMonth].COGS);
+
+            setChartData({ yearMonths, salesData, cogsData });
           },
           error: (error) => {
             console.error('Error parsing CSV:', error);
@@ -51,6 +64,7 @@ const BarChartFinancialsByMonth = () => {
         },
       },
       legend: {
+        data: ['Sales', 'COGS'],
         top: '10%', // Position legend below the title
       },
       grid: {
@@ -59,14 +73,9 @@ const BarChartFinancialsByMonth = () => {
         bottom: '15%', // Space for rotated x-axis labels
         containLabel: true, // Ensure labels are contained within the grid
       },
-      dataset: {
-        // Define dimensions (first is category, others map to series)
-        dimensions: ['YearMonth', 'Sales', 'COGS'],
-        // Use the transformed data directly from CSV
-        source: chartData,
-      },
       xAxis: {
         type: 'category',
+        data: chartData.yearMonths,
         axisLabel: {
           rotate: 45, // Rotate x-axis labels to prevent overlap
           interval: 0, // Show all labels, no skipping
@@ -85,14 +94,18 @@ const BarChartFinancialsByMonth = () => {
       },
       series: [
         {
+          name: 'Sales',
           type: 'bar',
+          data: chartData.salesData,
           itemStyle: {
             color: '#8884d8',
           },
           barGap: 0, // No gap between bars of different series (Sales and COGS)
         },
         {
+          name: 'COGS',
           type: 'bar',
+          data: chartData.cogsData,
           itemStyle: {
             color: '#82ca9d',
           },

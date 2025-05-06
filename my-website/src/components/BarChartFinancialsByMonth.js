@@ -21,7 +21,7 @@ const BarChartFinancialsByMonth = () => {
               YearMonth: `${row.Year}-${row['Month Name']}`, // Format as "Year-Month"
               Sales: parseFloat(row.Sum_Sales) || 0,
               COGS: parseFloat(row.Sum_COGS) || 0
-            })).sort((a, b) => a.YearMonth.localeCompare(b.YearMonth)); // Sort chronologically
+            }));
             setChartData(source);
           },
           error: (error) => {

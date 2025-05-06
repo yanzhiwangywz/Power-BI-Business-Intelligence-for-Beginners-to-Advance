@@ -30,16 +30,20 @@ import BarChartFinancialsByCountry from '../../src/components/BarChartJS/BarChar
 
 <a href="/data/BarChart/BarChartFinancialsByCountry.csv" download="financials.csv">Download BarChartFinancialsByCountry.csv</a>
 
+<a href="/data/BarChart/BarChartFinancialsByCountry.yxmd" download="financials.csv">Download BarChartFinancialsByCountry.csv</a>
+
 --- 
 
 import BarChartFinancialsByMonth from '../../src/components/BarChartJS/BarChartFinancialsByMonth';
 
 <BarChartFinancialsByMonth /> 
 
-**Download Data:**
 
-<a href="/data/BarChart/BarChartFinancialsByMonth.csv" download="financials.csv">Download BarChartFinancialsByMonth.csv</a>
+<a href="/data/BarChart/BarChartFinancialsByMonth.csv" download="financials.csv">Download BarChartFinancialsByMonth workflow</a> 
+
+<a href="/data/BarChart/BarChartFinancialsByMonth.yxmd" download="financials.csv">Download BarChartFinancialsByMonth workflow</a>
 
 --- 
+
 
 

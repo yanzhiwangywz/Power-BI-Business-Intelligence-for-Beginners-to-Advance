@@ -28,9 +28,10 @@ import BarChartFinancialsByCountry from '../../src/components/BarChartJS/BarChar
 <BarChartFinancialsByCountry /> 
 
 
-<a href="/data/BarChart/BarChartFinancialsByCountry.csv" download="financials.csv">Download BarChartFinancialsByCountry.csv</a>
+<p><a href="/data/BarChart/BarChartFinancialsByCountry.csv" download="financials.csv">Download BarChartFinancialsByCountry.csv</a></p>
 
-<a href="/data/BarChart/BarChartFinancialsByCountry.yxmd" download="financials.csv">Download BarChartFinancialsByCountry.csv</a>
+
+<p><a href="/data/BarChart/BarChartFinancialsByCountry.yxmd" download="financials.csv">Download BarChartFinancialsByCountry workflow</a></p>
 
 --- 
 
@@ -39,9 +40,10 @@ import BarChartFinancialsByMonth from '../../src/components/BarChartJS/BarChartF
 <BarChartFinancialsByMonth /> 
 
 
-<a href="/data/BarChart/BarChartFinancialsByMonth.csv" download="financials.csv">Download BarChartFinancialsByMonth workflow</a> 
+<p><a href="/data/BarChart/BarChartFinancialsByMonth.csv" download="financials.csv">Download BarChartFinancialsByMonth.csv</a></p>
 
-<a href="/data/BarChart/BarChartFinancialsByMonth.yxmd" download="financials.csv">Download BarChartFinancialsByMonth workflow</a>
+
+<p><a href="/data/BarChart/BarChartFinancialsByMonth.yxmd" download="financials.csv">Download BarChartFinancialsByMonth workflow</a></p> 
 
 --- 
 

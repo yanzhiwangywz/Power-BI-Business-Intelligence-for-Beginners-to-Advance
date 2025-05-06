@@ -1,8 +1,8 @@
 ---
 sidebar_position: 2
 id: Visuals-Bar-Charts-in-Power-BI
-title: Visuals-Bar Charts in Power BI
-sidebar_label: Bar Charts
+title: Visuals Bar Charts in Power BI
+sidebar_label: Bar Charts 
 ---
 Bar charts are one of the most common data visualizations. With them, you can quickly highlight differences between categories, clearly show trends and outliers, and reveal historic highs and lows at a glance. Bar charts are especially effective when you have data that can be split into multiple categories.
 
@@ -19,7 +19,7 @@ Bar charts are one of the most common data visualizations. With them, you can qu
 
 **Download Data:**
 
-<a href="/data/BarChart/financials.csv" download="financials.csv">Download Financials Data (CSV)</a>
+<p><a href="/data/BarChart/financials.csv" download="financials.csv">Download Financials Data (CSV)</a></p> 
 
 ---
 

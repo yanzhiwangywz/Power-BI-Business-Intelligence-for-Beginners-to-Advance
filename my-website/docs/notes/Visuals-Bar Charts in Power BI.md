@@ -23,8 +23,16 @@ Bar charts are one of the most common data visualizations. With them, you can qu
 
 ---
 
-import BarChartFinancials from '../../src/components/BarChartFinancials';
+import BarChartFinancialsByCountry from '../../src/components/BarChartFinancialsByCountry';
 
-<BarChartFinancials /> 
+<BarChartFinancialsByCountry /> 
 
 --- 
+
+import BarChartFinancialsByMonth from '../../src/components/BarChartFinancialsByMonth';
+
+<BarChartFinancialsByMonth /> 
+
+--- 
+
+

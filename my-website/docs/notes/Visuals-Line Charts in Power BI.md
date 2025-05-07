@@ -20,7 +20,27 @@ sidebar_label: Line Charts
 * You don’t have to start the Y-axis scale at zero; break the scale if you  need.
 * If you are comparing two time series with very different units of measurement, consider using a logarithmic scale. 
 
----
+--- 
+
+**Download Data:**
+
+<p><a href="/data/LineChart/financials.csv" download="financials.csv">Download Financials Data (CSV)</a></p> 
+
+--- 
+
+import LineChartFinancialsByMonth from '../../src/components/LineChartJS/LineChartFinancialsByMonth';
+
+<LineChartFinancialsByMonth /> 
+
+
+<p><a href="/data/LineChart/LineChartFinancialsByCountry.csv" download="financials.csv">Download LineChartFinancialsByCountry.csv</a></p>
+
+
+<p><a href="/data/LineChart/LineChartFinancialsByCountry.yxmd" download="financials.csv">Download LineChartFinancialsByCountry workflow</a></p>
+
+--- 
+
+
 
 
 

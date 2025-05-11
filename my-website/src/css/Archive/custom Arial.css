@@ -17,7 +17,7 @@
   --ifm-font-color-base: #333333; /* Dark text for light mode */
   --ifm-background-color: #ffffff; /* White background for light mode */
   --ifm-font-size-base: 18px; /* Increased base font size for readability */
-  --ifm-font-family-base: 'Brush Script MT', 'Lobster', 'Helvetica Neue', sans-serif; /* Enhanced cursive fonts */
+  --ifm-font-family-base: 'Helvetica', 'Roboto', Arial, sans-serif; /* Helvetica primary, Roboto fallback */
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
 }
 
@@ -35,7 +35,7 @@
   --ifm-background-color: #222529; /* Body background from provided code */
   --ifm-code-font-size: 95%;
   --ifm-font-size-base: 18px; /* Increased base font size for readability */
-  --ifm-font-family-base: 'Brush Script MT', 'Lobster', 'Helvetica Neue', sans-serif; /* Enhanced cursive fonts */
+  --ifm-font-family-base: 'Helvetica', 'Roboto', Arial, sans-serif; /* Helvetica primary, Roboto fallback */
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
   --ifm-background-surface-color: #2f3337; /* Content background from provided code */
   --ifm-menu-color: #c1c2c3; /* Nav link color */

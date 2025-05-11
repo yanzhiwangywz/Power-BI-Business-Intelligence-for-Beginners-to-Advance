@@ -56,6 +56,11 @@ module.exports = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      colorMode: {
+      defaultMode: 'dark',
+      disableSwitch: false, // Set to true if you want to disable the light/dark toggle
+      respectPrefersColorScheme: false, // Set to true to respect user's system preferences
+    },
       // Navbar setup (removed logo to eliminate icon in top-left corner)
       navbar: {
         title: ' ', // Minimal placeholder to satisfy validation

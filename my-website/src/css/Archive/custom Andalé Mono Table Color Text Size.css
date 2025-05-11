@@ -63,31 +63,39 @@ p, li, div, article, section {
   font-family: var(--ifm-font-family-base);
   line-height: 1.6; /* Matches second CSS for readability */
 }
-p { font-size: 1.3rem; } /* Standard body text, matches --ifm-font-size-base (18px) */
-li { font-size: 1.3rem; } /* List items, same as paragraphs */
-span { font-size: 0.95rem; } /* Slightly smaller for inline text */
-small { font-size: 0.85rem; } /* Smaller for captions or secondary text */
+p { font-size: 1.3rem; } /* Updated to 1.3rem */
+li { font-size: 1.3rem; } /* Updated to 1.3rem */
+span { font-size: 1.3rem; } /* Updated to 1.3rem */
+small { font-size: 1.3rem; } /* Updated to 1.3rem */
 
-/* Table styles */
+/* Table text sizes */
 table {
   background-color: var(--ifm-table-background) !important;
   border-collapse: collapse;
 }
-th {
-  background-color: var(--ifm-table-head-background) !important;
+th, td {
+  font-family: var(--ifm-font-family-base);
+  line-height: 1.6; /* Matches content text for readability */
   padding: 10px; /* Consistent with second CSS for readability */
-  font-size: var(--ifm-font-size-base);
+}
+th {
+  font-size: 1.05rem; /* Slightly larger for table headers */
+  background-color: var(--ifm-table-head-background) !important;
   font-weight: bold; /* Consistent with second CSS */
 }
 td {
+  font-size: 1.0rem; /* Matches original body text size */
   background-color: var(--ifm-table-background) !important;
-  padding: 10px; /* Consistent with second CSS for readability */
-  font-size: var(--ifm-font-size-base);
 }
 
 /* Code blocks */
-code,
-pre {
+code {
   font-family: 'LXGW WenKai TC', 'Roboto Mono', 'Consolas', monospace; /* Ensure monospace fallback for code */
-  font-size: calc(var(--ifm-font-size-base) * 0.9); /* Consistent with second CSS */
+  font-size: 1.3rem; /* Inherit font size from parent (e.g., span, small) */
+  color: red; /* Updated to red for inline code */
+  padding-right: 8px; /* Increased right padding for inline code */
+}
+pre {
+  font-family: 'LXGW WenKai TC', 'Roboto Mono', 'Roboto Mono', 'Consolas', monospace; /* Ensure monospace fallback for code */
+  font-size: calc(var(--ifm-font-size-base) * 0.9); /* Fixed size for block code, ~16.2px */
 }

@@ -14,7 +14,8 @@
   --ifm-color-primary-lighter: #359962;
   --ifm-color-primary-lightest: #3cad6e;
   --ifm-code-font-size: 95%;
-  --ifm-font-family-base: 'Andalé Mono', 'Roboto Mono', 'Consolas', monospace; /* Added to match second CSS */
+  --ifm-font-family-base: 'Andalé Mono', 'Roboto Mono', 'Consolas', monospace; /* Kept from second CSS */
+  --ifm-font-size-base: 18px; /* Kept increased font size */
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
 }
 
@@ -27,11 +28,25 @@
   --ifm-color-primary-light: #29d5b0;
   --ifm-color-primary-lighter: #32d8b4;
   --ifm-color-primary-lightest: #4fddbf;
-  --ifm-font-family-base: 'Andalé Mono', 'Roboto Mono', 'Consolas', monospace; /* Added to match second CSS */
+  --ifm-font-family-base: 'Andalé Mono', 'Roboto Mono', 'Consolas', monospace; /* Kept from second CSS */
+  --ifm-font-size-base: 18px; /* Kept increased font size */
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
 
-/* Apply font globally */
+/* Apply font and font size globally */
 body {
   font-family: var(--ifm-font-family-base);
+  font-size: var(--ifm-font-size-base);
 }
+
+/* Smaller header sizes for Markdown */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--ifm-font-family-base);
+  line-height: 1.3; /* Consistent with second CSS for readability */
+}
+h1 { font-size: 2.2rem; } /* Reduced from typical 2.2rem */
+h2 { font-size: 1.8rem; } /* Reduced from typical 1.8rem */
+h3 { font-size: 1.5rem; } /* Reduced from typical 1.5rem */
+h4 { font-size: 1.3rem; } /* Reduced from typical 1.3rem */
+h5 { font-size: 1.1rem; } /* Reduced from typical 1.1rem */
+h6 { font-size: 1.0rem; } /* Reduced from typical 1.0rem */

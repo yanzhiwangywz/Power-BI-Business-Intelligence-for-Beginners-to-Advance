@@ -4,9 +4,9 @@
  * work well for content-centric websites.
  */
 
-/* You can override the default Infima variables here. */
+/* Root variables for light mode, keeping existing primary colors */
 :root {
-  --ifm-color-primary: #2e8555;
+  --ifm-color-primary: #2e8555; /* Kept as is for light mode */
   --ifm-color-primary-dark: #29784c;
   --ifm-color-primary-darker: #277148;
   --ifm-color-primary-darkest: #205d3b;
@@ -14,17 +14,140 @@
   --ifm-color-primary-lighter: #359962;
   --ifm-color-primary-lightest: #3cad6e;
   --ifm-code-font-size: 95%;
+  --ifm-font-color-base: #333333; /* Dark text for light mode */
+  --ifm-background-color: #ffffff; /* White background for light mode */
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
 }
 
-/* For readability concerns, you should choose a lighter palette in dark mode. */
+/* Dark mode styles */
 [data-theme='dark'] {
-  --ifm-color-primary: #25c2a0;
-  --ifm-color-primary-dark: #21af90;
-  --ifm-color-primary-darker: #1fa588;
-  --ifm-color-primary-darkest: #1a8870;
-  --ifm-color-primary-light: #29d5b0;
-  --ifm-color-primary-lighter: #32d8b4;
-  --ifm-color-primary-lightest: #4fddbf;
+  /* Primary colors adapted to match the provided code's link color (#1abc9c) */
+  --ifm-color-primary: #1abc9c; /* Matches link color from provided code */
+  --ifm-color-primary-dark: #17a589;
+  --ifm-color-primary-darker: #15907a;
+  --ifm-color-primary-darkest: #117a65;
+  --ifm-color-primary-light: #20cfb0;
+  --ifm-color-primary-lighter: #2ad4b8;
+  --ifm-color-primary-lightest: #4dddc4;
+  --ifm-font-color-base: #c1c2c3; /* Light text color from body in provided code */
+  --ifm-background-color: #222529; /* Body background from provided code */
+  --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+
+  /* Additional Infima variables for dark theme consistency */
+  --ifm-background-surface-color: #2f3337; /* Content background from provided code */
+  --ifm-menu-color: #c1c2c3; /* Nav link color */
+  --ifm-menu-color-active: #1abc9c; /* Active nav link matches link color */
+  --ifm-link-color: #1abc9c; /* Matches link color */
+  --ifm-link-hover-color: #2ecc71; /* Matches link hover color */
+  --ifm-heading-color: #ffffff; /* White headings from provided code */
+  --ifm-code-background: #1b1d1e; /* Code block background */
+  --ifm-code-color: #f8f8f2; /* Code text color */
+  --ifm-table-border-color: #454b50; /* Table border color */
+  --ifm-table-background: #2f3337; /* Table background */
+  --ifm-table-head-background: #3a3f44; /* Table header background */
+}
+
+/* Global styles for both themes */
+body {
+  background-color: var(--ifm-background-color);
+  color: var(--ifm-font-color-base);
+}
+
+a {
+  color: var(--ifm-link-color);
+}
+a:hover {
+  color: var(--ifm-link-hover-color);
+}
+
+/* Container and content */
+.container,
+.main-wrapper {
+  background-color: var(--ifm-background-surface-color);
+  color: var(--ifm-font-color-base);
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--ifm-heading-color);
+}
+
+/* Navigation */
+.navbar,
+.menu {
+  background-color: var(--ifm-background-surface-color);
+  border-color: var(--ifm-table-border-color);
+}
+.navbar__link,
+.menu__link {
+  color: var(--ifm-menu-color);
+}
+.navbar__link:hover,
+.menu__link:hover,
+.navbar__link--active,
+.menu__link--active {
+  color: var(--ifm-menu-color-active);
+}
+
+/* Code blocks */
+code,
+pre {
+  background-color: var(--ifm-code-background);
+  color: var(--ifm-code-color);
+  border: 1px solid var(--ifm-table-border-color);
+}
+
+/* Table styles */
+table {
+  background-color: var(--ifm-table-background) !important;
+  color: var(--ifm-heading-color) !important;
+  border: 1px solid var(--ifm-table-border-color) !important;
+  border-collapse: collapse;
+}
+th, td {
+  color: var(--ifm-heading-color) !important;
+  background-color: var(--if
+m-table-background) !important;
+  border: 1px solid var(--ifm-table-border-color) !important;
+  padding: 8px !important;
+}
+thead th {
+  background-color: var(--ifm-table-head-background) !important;
+  color: var(--ifm-heading-color) !important;
+  font-weight: bold;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-thumb {
+  background: #808080;
+  border-radius: 20px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 20px;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 996px) {
+  .navbar__items--right {
+    display: none; /* Hide navbar items on smaller screens */
+  }
+}
+
+@media screen and (max-width: 766px) {
+  .container {
+    padding: 0 10px;
+  }
+}
+
+/* Print styles */
+@media print {
+  .navbar,
+  .menu {
+    display: none;
+  }
 }
